@@ -3,12 +3,11 @@ import React, { Component } from 'react';
 
 
 
-class App extends Component {
+class Landing extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-
+      <div className="Landing">
+        Landing Page
       </div>
     );
   }
