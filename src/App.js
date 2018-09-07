@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import * as firebase from 'firebase';
-import './RoomList.js';
+import RoomList from './components/RoomList.js';
 
 //<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
 
@@ -23,7 +23,9 @@ class App extends Component {
         <header className="App-header">
         <h1 className="App-title">BLOC CHAT REACT</h1>
         </header>
-
+        <div>
+          <RoomList firebase = {firebase}/>
+        </div>
       </div>
     );
   }
