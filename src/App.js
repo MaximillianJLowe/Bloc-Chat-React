@@ -3,9 +3,9 @@ import './App.css';
 import * as firebase from 'firebase';
 import RoomList from './components/RoomList.js';
 
-<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
 
-  // Initialize Firebase
+
+
   var config = {
     apiKey: "AIzaSyA01uG3ibSdDl0ayq5ms8TifIgrnjtbhXM",
     authDomain: "bloc-chat-react-c18eb.firebaseapp.com",
