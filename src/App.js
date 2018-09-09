@@ -3,9 +3,6 @@ import './App.css';
 import * as firebase from 'firebase';
 import RoomList from './components/RoomList.js';
 
-
-
-
   var config = {
     apiKey: "AIzaSyA01uG3ibSdDl0ayq5ms8TifIgrnjtbhXM",
     authDomain: "bloc-chat-react-c18eb.firebaseapp.com",
@@ -16,17 +13,17 @@ import RoomList from './components/RoomList.js';
   };
   firebase.initializeApp(config);
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-        <h1 className="App-title">BLOC CHAT REACT</h1>
-        </header>
-        <div>
-          <RoomList firebase = {firebase}/>
+  class App extends Component {
+    render() {
+      return (
+        <div className="App">
+          <header className="App-header">
+          <h1 className="App-title">BLOC CHAT REACT</h1>
+          </header>
+            <div>
+              <RoomList firebase = {firebase}/>
+            </div>
         </div>
-      </div>
     );
   }
 }
