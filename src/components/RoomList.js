@@ -2,15 +2,6 @@ import React, { Component } from 'react';
 
 
 class RoomList extends Component {
-<<<<<<< HEAD
-    constructor(props) {
-      super(props);
-        this.roomsRef = this.props.firebase.database().ref('rooms');
-        this.state = {
-        rooms: []
-    }
-  };
-=======
   constructor(props) {
     super(props);
       this.roomsRef = this.props.firebase.database().ref('rooms');
@@ -19,7 +10,6 @@ class RoomList extends Component {
         newRoomName: " "
     };
 }
->>>>>>> checkpoint-3-create-rooms
 
     componentDidMount() {
       this.roomsRef.on('child_added', snapshot => {
