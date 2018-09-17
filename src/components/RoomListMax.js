@@ -33,7 +33,6 @@ class RoomList extends Component {
 }
 
     handleChange(e) {
-      e.preventDefault();
       this.setState({
         newRoomName: e.target.value
       });
@@ -41,7 +40,7 @@ class RoomList extends Component {
 
     render() {
       return (
-        <section className="chatroom-list">
+        <sidebar className="chatroom-list">
           {this.state.rooms.map( (room, index) =>
             <div key={index}>{room.name}</div>
       )}
@@ -55,7 +54,7 @@ class RoomList extends Component {
                          value="New Room" />
               </form>
             </div>
-        </section>
+        </sidebar>
       );
    }
 }
