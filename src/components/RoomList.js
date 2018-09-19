@@ -41,9 +41,11 @@ class RoomList extends Component {
 
     render() {
       return (
-        <section className="chatroom-list">
+        <section className="chatroom-block">
           {this.state.rooms.map( (room, index) =>
-            <div key={index}>{room.name}</div>
+            <div className="room-list"
+            key={room.key}
+            onClick={ () => this.props.setRoom(room) }>{room.name}</div>
       )}
             <div>
               <form onSubmit={ (e) => this.createRoom(e) }>
