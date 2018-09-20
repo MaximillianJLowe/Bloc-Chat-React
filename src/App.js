@@ -3,7 +3,7 @@ import './App.css';
 import * as firebase from 'firebase';
 import RoomList from './components/RoomList.js';
 import MessageList from './components/MessageList.js';
-
+import User from './components/User.js';
   var config = {
     apiKey: "AIzaSyA01uG3ibSdDl0ayq5ms8TifIgrnjtbhXM",
     authDomain: "bloc-chat-react-c18eb.firebaseapp.com",
@@ -18,7 +18,8 @@ import MessageList from './components/MessageList.js';
     constructor(props) {
       super(props);
       this.state = {
-        activeRoom: ""
+        activeRoom: "",
+        user: ""
       };
     }
 
@@ -29,6 +30,10 @@ import MessageList from './components/MessageList.js';
       console.log(this.state.activeRoom);
     }
 
+    setUser(user) {
+      this.setState({ user: user });
+    }
+  
     render() {
       return (
         <div className="App">
@@ -38,6 +43,7 @@ import MessageList from './components/MessageList.js';
             <div>
               <RoomList firebase = {firebase} setRoom={this.setRoom.bind(this)} activeRoom={this.state.activeRoom} />
               <MessageList firebase = {firebase} activeRoom={this.state.activeRoom} />
+              <User firebase ={firebase} setUser={(user) => this.setUser(user)} user={this.state.user} />
             </div>
         </div>
     );

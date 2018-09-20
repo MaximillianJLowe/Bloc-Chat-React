@@ -36,8 +36,8 @@ class MessageList extends Component {
 			message.roomId === this.props.activeRoom.key).map((message) =>
         <section className="message-item" key={message.key}>
           <ul>
-					<li className="content">{message.content}</li>
-          <li className="username">{message.username}</li>
+					<li className="content">Message: {message.content}</li>
+          <li className="username">User: {message.username}</li>
 					<li className="roomId">Room ID: {message.roomId}</li>
 					<li className="sentAt">{message.sentAt}</li>
 					</ul>
